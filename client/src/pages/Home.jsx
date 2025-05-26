@@ -9,7 +9,7 @@ import Stats from "../components/Stats";
 const Home = () => {
   return (
     <Layout>
-     <div className="w-full rounded">
+     <div className="w-full ">
         <div className="w-full mx-auto ">
             <Carousel />
         </div>

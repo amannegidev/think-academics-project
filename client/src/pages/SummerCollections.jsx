@@ -126,12 +126,15 @@ const SummerCollections = ()  => {
 
   return (
   <Layout>
-    <div className="w-11/12 md:w-full h-full flex flex-col items-center justify-center mb-5">
+    <div className="w-full mx-auto h-full flex flex-col items-center justify-center mb-5">
       <SummerCaraousel />
     </div>
 
     <section className="px-1 md:px-4 py-2 md:py-12 " >
       <div className="max-w-11/12 mx-auto font-[helvetica]">
+       <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 md:mb-10 ">
+          Just Arrived <span className='block md:hidden'><i class="bi bi-arrow-right"></i></span>
+        </h2>
         <div className="flex sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 overflow-x-auto scroll-smooth ">
           {products.map((product) => (
             <div

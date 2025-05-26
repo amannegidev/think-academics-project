@@ -55,7 +55,7 @@ const wishlistItems = [
 const WishlistProductTable = () => {
   return (
  <Layout>
-  <div className="w-11/12 mx-auto p-4 md:p-8 min-h-screen font-[helvetica]">
+  <div className="w-11/12 mx-auto p-4 md:p-8 min-h-screen font-[helvetica] ">
     <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">your favorite products</h1>
     <p className="text-gray-500">
       you have <span className="text-black font-bold">4</span> products in your wishlist
@@ -105,7 +105,7 @@ const WishlistProductTable = () => {
                   </button>
                 ) : (
                   <button className="px-3 py-1 text-xs md:text-sm bg-red-300 text-black rounded">
-                    Contact Us
+                    not available
                   </button>
                 )}
               </td>

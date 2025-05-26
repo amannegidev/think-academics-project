@@ -2,7 +2,7 @@ import { useState, useContext } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import Layout from '../components/layouts/layout';
+import Layout from '../components/layouts/Layout';
 import { useAuth } from '../context/AuthContex'; 
 
 const API = import.meta.env.VITE_API_BASE_URL;

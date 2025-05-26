@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from "react"
-import Layout from '../components/layouts/layout'
+import Layout from '../components/layouts/Layout'
 
 const cart = () => {
     const [showAddress, setShowAddress] = React.useState(false)

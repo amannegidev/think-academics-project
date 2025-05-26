@@ -119,14 +119,14 @@ const AllProducts = () => {
                 />
               </Link>
 
-              <div className="p-4 flex-1 flex md:flex-col justify-between items-center space-x-1 bg-gray-100">
+              <div className="p-1 flex-1 flex md:flex-col justify-between items-center space-x-1 bg-gray-100">
                 <div className="sm:block md:flex items-center justify-between">
                   <h3 className="text-lg font-semibold text-gray-700">{product.name}</h3>
                   <p className="text-red-700 font-bold">{product.price}</p>
                 </div>
                 <button
                   onClick={handleAddToCart}
-                  className=" w-[50%] md:hidden bg-[#fba418d0] text-white py-2 rounded-md hover:bg-red-700 transition"
+                  className=" w-[30%] md:hidden bg-[#fba418d0] text-white py-2 rounded-md hover:bg-red-700 transition"
                 >
                   <i class="bi bi-cart-plus"></i>
                 </button>

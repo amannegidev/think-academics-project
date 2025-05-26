@@ -4,6 +4,9 @@ import { useNavigate,Link } from "react-router-dom";
 import toast from "react-hot-toast";
 import Layout from "../components/layouts/Layout"; 
 
+const API = import.meta.env.VITE_API_BASE_URL;
+
+
 const Register = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -26,7 +29,7 @@ const handleSubmit = async (e) => {
       answer,
     };
 
-    const res = await axios.post('/api/v1/auth/register', userData, {
+    const res = await axios.post(`${API}/v1/auth/register`, userData, {
       headers: { 'Content-Type': 'application/json' }
     });
 

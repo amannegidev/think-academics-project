@@ -4,6 +4,9 @@ import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import Layout from "../components/layouts/Layout";
 
+const API = import.meta.env.VITE_API_BASE_URL;
+
+
 const ForgotPass = () => {
     const [email, setEmail] = useState("");
     const [newPassword, setNewPassword] = useState("");
@@ -13,7 +16,7 @@ const ForgotPass = () => {
       const handleForgotpass = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post("/api/v1/auth/forgotpass", {
+            const res = await axios.post(`${API}/api/v1/auth/forgotpass`, {
                 email,
                 newPassword,
                 answer

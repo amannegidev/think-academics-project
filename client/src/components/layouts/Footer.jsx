@@ -13,7 +13,7 @@ const Footer = () => {
           </Link>
           <p className='sm:w-full md:w-8/12  my-4'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae neque enim voluptates possimus dolorem porro aliquam quasi tenetur quos dignissimos.</p>
           <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-            © 2023 OnlyOne. All rights reserved.
+            © 2025 OnlyOne. All rights reserved.
           </p>
         </div>
 

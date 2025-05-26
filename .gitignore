@@ -1,0 +1,15 @@
+# Root-level ignores
+node_modules/
+.env
+.env.local
+.env.production
+.env.development
+server/.env
+client/.env
+
+# Log files
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

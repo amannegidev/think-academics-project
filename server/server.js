@@ -4,6 +4,7 @@ import connectDB from './db/dbConnection.js';
 import dotenv from 'dotenv';
 import authRoutes from './routes/authRoutes.js';
 import path from "path";
+import cors from 'cors';
 
 
 const app = express();
@@ -13,8 +14,16 @@ dotenv.config({ path: './.env' });
 // Connect to MongoDB
 connectDB();
 
-// Middleware to parse JSON requests
+// Middleware 
+
+app.use(cors({
+  origin: '*',
+  credentials: true,
+}));
+
+
 app.use(express.json());
+
 
 
 // Authentication routes 

@@ -1,4 +1,4 @@
-import Layout from "../components/layouts/layout";
+import Layout from "../components/layouts/Layout";
 import  Carousel  from "../components/Craousel";
 import JustArrivedProducts from "../components/JustArrived";
 import AllProducts from "../components/AllProducts";

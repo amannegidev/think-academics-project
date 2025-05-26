@@ -18,7 +18,8 @@ connectDB();
 
 // Allowed Origins
 const allowedOrigins = [
-  'https://think-academics-project.vercel.app/',
+  'https://client-9j6r.onrender.com', 
+  'http://localhost:3000'
 ];
 
 const corsOptions = {

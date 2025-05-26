@@ -5,7 +5,6 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import { BrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
 import { AuthProvider } from './context/AuthContex.jsx';
-import './app.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

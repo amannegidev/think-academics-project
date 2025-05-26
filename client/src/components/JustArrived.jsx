@@ -31,7 +31,7 @@ const products = [
 
 const JustArrivedProducts = () => {
   return (
-    <section className="px-4 py-12 bg-" >
+    <section className="px-4 py-3 md:py-12 bg-" >
       <div className="max-w-full font-[helvetica]">
         <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-10 ">
           Just Arrived

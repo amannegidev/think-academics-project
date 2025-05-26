@@ -93,69 +93,74 @@ const NewProducts = () => {
     toast('Item added to cart!');
   };
 
-    return (
-        <Layout>
-            <div className="flex flex-col lg:flex-row mb-5">
-                {/* Sidebar */}
-                <div className=''>
-                    <FilterSidebar />
-                </div>
-         <section className="mt-4 px-6 bg-white md:border-l-1 ">
-              <div className="w-full font-[helvetica]">
-                {/* <h2 className="hidden md:block text-2xl md:text-xl font-bold text-gray-800 uppercase my-5 md:mt-5  md:mx-4  md:mb-16">womens Products</h2> */}
-        
-                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-                  {products.map((product) => (
-                    <div
-                      key={product.id}
-                      className="relative rounded-t-xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 bg-white flex flex-col"
-                    >
-                      <button
-                        onClick={() => toggleWishlist(product.id)}
-                        className={`absolute top-2 right-2 z-10 text-xl transition-colors ${
-                          wishlist.includes(product.id) ? 'text-red-600' : 'text-gray-500'
-                        }`}
-                      >
-                        <i className="bi bi-heart-fill"></i>
-                      </button>
-        
-                      <Link to={`/product/${product.id}`}>
-                        <img
-                          src={product.image}
-                          alt={product.name}
-                          className="w-full h-64 object-contain"
-                        />
-                      </Link>
-        
-                      <div className="p-4 flex-1 flex flex-col justify-between bg-gray-100">
-                        <div className="sm:block md:flex items-center justify-between">
-                          <h3 className="text-lg font-semibold text-gray-700">{product.name}</h3>
-                          <p className="text-red-700 font-bold">{product.price}</p>
-                        </div>
-        
-                        <button
-                          onClick={handleAddToCart}
-                          className="mt-4 w-full hidden md:block  bg-[#fba418d0] text-white py-2 rounded-md hover:bg-red-700 transition"
-                        >
-                          Add to Cart
-                        </button>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-        
-                <div className="mx-auto flex justify-center">
-                  <Link
-                    to="/products"
-                    className="mt-8 bg-white border text-black px-6 py-3 rounded-md transition hover:bg-gray-300"
+  return (
+    <Layout>
+      <div className="flex flex-col lg:flex-row mb-5">
+        {/* Sidebar */}
+        <div className=''>
+          <FilterSidebar />
+        </div>
+        <section className="mt-4 px-6 bg-white md:border-l-1 ">
+          <div className="w-full font-[helvetica]">
+            {/* <h2 className="hidden md:block text-2xl md:text-xl font-bold text-gray-800 uppercase my-5 md:mt-5  md:mx-4  md:mb-16">womens Products</h2> */}
+
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+              {products.map((product) => (
+                <div
+                  key={product.id}
+                  className="relative rounded-t-xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 bg-white flex flex-col"
+                >
+                  <button
+                    onClick={() => toggleWishlist(product.id)}
+                    className={`absolute top-2 right-2 z-10 text-xl transition-colors ${wishlist.includes(product.id) ? 'text-red-600' : 'text-gray-500'
+                      }`}
                   >
-                    View All Products
+                    <i className="bi bi-heart-fill"></i>
+                  </button>
+
+                  <Link to={`/product/${product.id}`}>
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-64 object-contain"
+                    />
                   </Link>
+
+                  <div className="p-1 md:p-4 flex-1 flex md:flex-col justify-between  items space-x-1 bg-gray-100">
+                    <div className="sm:block md:flex items-center justify-between">
+                      <h3 className="text-lg font-semibold text-gray-700">{product.name}</h3>
+                      <p className="text-red-700 font-bold">{product.price}</p>
+                    </div>
+                    <button
+                      onClick={handleAddToCart}
+                      className=" w-[30%] md:hidden bg-[#fba418d0] text-white py-2 rounded-md hover:bg-red-700 transition"
+                    >
+                      <i class="bi bi-cart-plus"></i>
+                    </button>
+
+                    <button
+                      onClick={handleAddToCart}
+                      className="mt-4 w-full hidden md:block bg-[#fba418d0] text-white py-2 rounded-md hover:bg-red-700 transition"
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </section>
+              ))}
             </div>
-        </Layout>
-    );
+
+            <div className="mx-auto flex justify-center">
+              <Link
+                to="/products"
+                className="mt-8 bg-white border text-black px-6 py-3 rounded-md transition hover:bg-gray-300"
+              >
+                View All Products
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </Layout>
+  );
 }
 export default NewProducts;

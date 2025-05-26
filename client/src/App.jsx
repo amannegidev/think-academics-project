@@ -13,6 +13,8 @@ import CartPage from './pages/Cart';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import ForgotPass from './pages/ForgetPassword';
+import NotFound from './pages/PageNotFound';
+import AllProductsPage from './pages/AllProductsPage';
 
 
 
@@ -36,6 +38,10 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/forgotpass" element={<ForgotPass />} />
+      <Route path="/products" element={<AllProductsPage />} />
+     
+      <Route path="*" element={<NotFound />} />
+
 
 
     </Routes>

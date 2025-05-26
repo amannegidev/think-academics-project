@@ -111,7 +111,7 @@ const cart = () => {
                     </p>
                 </div>
 
-                <button className="w-full py-3 mt-6 cursor-pointer bg-green-300 text-black font-medium hover:bg-green-600 transition rounded">
+                <button className="w-full py-3 mt-6 cursor-pointer bg-[#fba418] text-black font-medium hover:bg-green-600 transition rounded">
                     Place Order
                 </button>
             </div>

@@ -107,114 +107,119 @@ const SummerProducts = [
 ];
 
 
-const SummerCollections = ()  => {
-    
-     const [wishlist, setWishlist] = useState([]);
-    
-      const toggleWishlist = (productId) => {
-        setWishlist((prev) =>
-          prev.includes(productId)
-            ? prev.filter((id) => id !== productId)
-            : [...prev, productId]
-        );
-      };
-    
-      const handleAddToCart = () => {
-        toast('Item added to cart!');
-      };
-    
+const SummerCollections = () => {
+
+  const [wishlist, setWishlist] = useState([]);
+
+  const toggleWishlist = (productId) => {
+    setWishlist((prev) =>
+      prev.includes(productId)
+        ? prev.filter((id) => id !== productId)
+        : [...prev, productId]
+    );
+  };
+
+  const handleAddToCart = () => {
+    toast('Item added to cart!');
+  };
+
 
   return (
-  <Layout>
-    <div className="w-full mx-auto h-full flex flex-col items-center justify-center mb-5">
-      <SummerCaraousel />
-    </div>
-
-    <section className="px-1 md:px-4 py-2 md:py-12 " >
-      <div className="max-w-11/12 mx-auto font-[helvetica]">
-       <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 md:mb-10 ">
-          Just Arrived <span className='inline-block md:hidden ml-30 animate-pulse text-red-700'><i class="bi bi-arrow-right"></i></span>
-        </h2>
-        <div className="flex sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 overflow-x-auto scroll-smooth ">
-          {products.map((product) => (
-            <div
-              key={product.id}
-              className="min-w-[100%]  rounded-xl bg-white overflow-hidden shadow-sm hover:shadow-md transition duration-300"
-            >
-              <div className="relative">
-                <Link to={`/product/${product.id}`}>
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-64 object-cover"
-                  />
-                </Link>
-                {product.tag && (
-                  <span className="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
-                    {product.tag}
-                  </span>
-                )}
-              </div>
-              <div className="p-4 bg-[#B80000] h-full">
-                <h3 className="text-lg font-semibold text-white">{product.name}</h3>
-                <p className="text-white mt-1">
-                  <span className="text-black">{product.price}</span>
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-
+    <Layout>
+      <div className="w-full mx-auto h-full flex flex-col items-center justify-center mb-5">
+        <SummerCaraousel />
       </div>
-    </section>
-    
-    <section className="px-4 bg-white mb-5">
-          <div className="w-11/12 mx-auto font-[helvetica]">
-            <hr className="mb-10 text-red-950" />
-    
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-              {SummerProducts.map((SummerProducts) => (
-                <div
-                  key={SummerProducts.id}
-                  className="relative rounded-t-xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 bg-white flex flex-col"
-                >
-                  <button
-                    onClick={() => toggleWishlist(SummerProducts.id)}
-                    className={`absolute top-2 right-2 z-10 text-xl transition-colors ${
-                      wishlist.includes(SummerProducts.id) ? 'text-red-600' : 'text-gray-500'
-                    }`}
-                  >
-                    <i className="bi bi-heart-fill"></i>
-                  </button>
-    
-                  <Link to={`/SummerProducts/${SummerProducts.id}`}>
+
+      <section className="px-1 md:px-4 py-2 md:py-12 " >
+        <div className="max-w-11/12 mx-auto font-[helvetica]">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 md:mb-10 ">
+            Just Arrived <span className='inline-block md:hidden ml-30 animate-pulse text-red-700'><i class="bi bi-arrow-right"></i></span>
+          </h2>
+          <div className="flex sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 overflow-x-auto scroll-smooth ">
+            {products.map((product) => (
+              <div
+                key={product.id}
+                className="min-w-[100%]  rounded-xl bg-white overflow-hidden shadow-sm hover:shadow-md transition duration-300"
+              >
+                <div className="relative">
+                  <Link to={`/product/${product.id}`}>
                     <img
-                      src={SummerProducts.image}
-                      alt={SummerProducts.name}
-                      className="w-full h-40 object-contain p-2"
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-64 object-cover"
                     />
                   </Link>
-    
-                  <div className="p-4 flex-1 flex flex-col justify-between bg-gray-100">
-                    <div className="sm:block md:flex items-center justify-between">
-                      <h3 className="text-lg font-semibold text-gray-700">{SummerProducts.name}</h3>
-                      <p className="text-red-700 font-bold">{SummerProducts.price}</p>
-                    </div>
-    
-                    <button
-                      onClick={handleAddToCart}
-                      className="mt-4 w-full hidden md:block  bg-[#fba418d0] text-white py-2 rounded-md hover:bg-red-700 transition"
-                    >
-                      Add to Cart
-                    </button>
-                  </div>
+                  {product.tag && (
+                    <span className="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
+                      {product.tag}
+                    </span>
+                  )}
                 </div>
-              ))}
-            </div>
-    
-          
+                <div className="p-4 bg-[#B80000] h-full">
+                  <h3 className="text-lg font-semibold text-white">{product.name}</h3>
+                  <p className="text-white mt-1">
+                    <span className="text-black">{product.price}</span>
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
-        </section>
+
+        </div>
+      </section>
+
+      <section className="px-4 bg-white mb-5">
+        <div className="w-11/12 mx-auto font-[helvetica]">
+          <hr className="mb-10 text-red-950" />
+
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+            {SummerProducts.map((SummerProducts) => (
+              <div
+                key={SummerProducts.id}
+                className="relative rounded-t-xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 bg-white flex flex-col"
+              >
+                <button
+                  onClick={() => toggleWishlist(SummerProducts.id)}
+                  className={`absolute top-2 right-2 z-10 text-xl transition-colors ${wishlist.includes(SummerProducts.id) ? 'text-red-600' : 'text-gray-500'
+                    }`}
+                >
+                  <i className="bi bi-heart-fill"></i>
+                </button>
+
+                <Link to={`/SummerProducts/${SummerProducts.id}`}>
+                  <img
+                    src={SummerProducts.image}
+                    alt={SummerProducts.name}
+                    className="w-full h-40 object-contain p-2"
+                  />
+                </Link>
+
+                <div className="p-1 md:p-4 flex-1 flex md:flex-col justify-between  items space-x-1 bg-gray-100">
+                  <div className="sm:block md:flex items-center justify-between">
+                    <h3 className="text-lg font-semibold text-gray-700">{SummerProducts.name}</h3>
+                    <p className="text-red-700 font-bold">{SummerProducts.price}</p>
+                  </div>
+                  <button
+                    onClick={handleAddToCart}
+                    className=" w-[30%] md:hidden bg-[#fba418d0] text-white py-2 rounded-md hover:bg-red-700 transition"
+                  >
+                    <i class="bi bi-cart-plus"></i>
+                  </button>
+
+                  <button
+                    onClick={handleAddToCart}
+                    className="mt-4 w-full hidden md:block bg-[#fba418d0] text-white py-2 rounded-md hover:bg-red-700 transition"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+
+
+        </div>
+      </section>
 
     </Layout>
   );

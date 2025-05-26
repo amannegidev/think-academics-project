@@ -90,7 +90,7 @@ export default function CategorySidebar() {
       <div className="lg:hidden p-4">
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="text-gray-700 border px-3 py-1 rounded-md flex items-center gap-2"
+          className="text-gray-700 border px-6 py-1 rounded-md flex items-center gap-2"
         >
           <i className="bi bi-filter"></i>
           Filters

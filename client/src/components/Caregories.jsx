@@ -59,7 +59,7 @@ const CategoriesPage = () => {
       />
       
       <div className="text-center h-[20%] bg-[#B80000] py-2">
-        <h3 className="text-white sm:text-lg md:text-2xl capitalize mb-2  font-semibold drop-shadow-md">
+        <h3 className="text-white sm:text-lg md:text-2xl capitalize my-3  font-semibold drop-shadow-md">
           {category.name}
         </h3>
       </div>

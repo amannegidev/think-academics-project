@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate,Link } from "react-router-dom";
 import toast from "react-hot-toast";
-import Layout from "../components/layouts/layout"; 
+import Layout from "../components/layouts/Layout"; 
 
 const Register = () => {
     const [name, setName] = useState("");

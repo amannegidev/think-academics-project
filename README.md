@@ -1,7 +1,7 @@
 OneOnly – MERN E-Commerce App
 A modern, full-stack e-commerce project built with React, Vite, Tailwind CSS, Node.js, Express, and MongoDB. Features JWT authentication, responsive UI, reusable components, and dynamic product pages.
 
-live demo :
+live demo : https://think-academics-project.vercel.app/
 
 ⚙️ Tech Stack
 Frontend

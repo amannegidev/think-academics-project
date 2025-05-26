@@ -27,7 +27,7 @@ Postman – for API testing
 MongoDB Compass – for local DB management
 
 
-rontend Setup (client/)
+frontend Setup (client/)
 cd client
 npm install
 

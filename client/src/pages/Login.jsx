@@ -18,7 +18,7 @@ export default function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-     const res = await axios.post(`${API}/v1/auth/login`, { email, password }, { withCredentials: true });
+     const res = await axios.post(`${API}/api/v1/auth/login`, { email, password }, { withCredentials: true });
       if (res && res.data.success) {
         toast.success(res.data.message);
         setAuth({

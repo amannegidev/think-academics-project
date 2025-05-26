@@ -29,7 +29,7 @@ const handleSubmit = async (e) => {
       answer,
     };
 
-    const res = await axios.post(`${API}/v1/auth/register`, userData, {
+    const res = await axios.post(`${API}/api/v1/auth/register`, userData, {
      headers: { 'Content-Type': 'application/json' }
     });
 

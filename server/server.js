@@ -18,7 +18,7 @@ connectDB();
 
 // Allowed Origins
 const allowedOrigins = [
-  'https://client-9j6r.onrender.com', 
+  'https://think-academics-project.vercel.app',  
   'http://localhost:3000'
 ];
 

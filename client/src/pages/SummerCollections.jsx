@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import SummerCaraousel from "../components/Summercaraousel";
-import Layout from "../components/layouts/layout";
+import Layout from "../components/layouts/Layout";
 import { useState } from "react";
 import { toast } from "react-toastify";
 

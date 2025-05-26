@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import FilterSidebar from "../components/FilterSidebar";
-import Layout from "../components/layouts/layout";
+import Layout from "../components/layouts/Layout";
 
 
 const products = [

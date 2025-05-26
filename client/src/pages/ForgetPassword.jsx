@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
-import Layout from "../components/layouts/layout";
+import Layout from "../components/layouts/Layout";
 
 const ForgotPass = () => {
     const [email, setEmail] = useState("");

@@ -20,7 +20,7 @@ const products = [
   },
   {
     id: 3,
-    name: ' womens summer collection',
+    name: ' women summer collection',
     image: 'https://images.hellomagazine.com/horizon/landscape/f6d994a52884-myleene-klass-littlewoods-t.jpg',
     tag: 'New',
 
@@ -126,11 +126,11 @@ const SummerCollections = ()  => {
 
   return (
   <Layout>
-    <div className="w-full h-full flex flex-col items-center justify-center mb-5">
+    <div className="w-11/12 md:w-full h-full flex flex-col items-center justify-center mb-5">
       <SummerCaraousel />
     </div>
 
-    <section className="px-4 py-2 md:py-12 " >
+    <section className="px-1 md:px-4 py-2 md:py-12 " >
       <div className="max-w-11/12 mx-auto font-[helvetica]">
         <div className="flex sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 overflow-x-auto scroll-smooth ">
           {products.map((product) => (
@@ -152,7 +152,7 @@ const SummerCollections = ()  => {
                   </span>
                 )}
               </div>
-              <div className="p-4 bg-[#B80000]">
+              <div className="p-4 bg-[#B80000] h-full">
                 <h3 className="text-lg font-semibold text-white">{product.name}</h3>
                 <p className="text-white mt-1">
                   <span className="text-black">{product.price}</span>

@@ -43,7 +43,7 @@ const slides = [
   };
 
   return (
-    <div className="relative w-11/12 mx-auto mt-3 font-[helvetica]">
+    <div className="relative w-full mx-auto  font-[helvetica]">
       <div className="relative h-60 md:h-[700px] overflow-hidden rounded-sm">
         {slides.map((slide, index) => (
           <div

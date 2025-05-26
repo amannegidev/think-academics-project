@@ -42,9 +42,9 @@ const categories = [
 
 const CategoriesPage = () => {
   return (
-    <section className="px-4 sm:py-5 md:py-12   bg-white font-[helvetica]">
+    <section className="px-1 md:px-4 py-5 md:py-12   bg-white font-[helvetica]">
       <div className="max-full mx-auto ">
-        <h2 className="text-3xl font-bold text-gray-800 mb-10">Shop by Category</h2>
+        <h2 className="text-xl lg:text-3xl font-bold text-gray-800 mb-5 md:mb-10">Shop by Category</h2>
         <div className="grid grid-cols-2 sm:grid-cols-2  lg:grid-cols-6 gap-6">
   {categories.map((category) => (
     <Link
@@ -55,11 +55,11 @@ const CategoriesPage = () => {
       <img
         src={category.image}
         alt={category.name}
-        className="w-full h-49 object-cover position-center"
+        className="w-full h-49 object-contain md:object-cover position-center"
       />
       
       <div className="text-center bg-[#B80000] py-2">
-        <h3 className="text-white sm:text-lg md:text-3xl font-semibold drop-shadow-md">
+        <h3 className="text-white sm:text-lg md:text-xl lg:text-3xl font-semibold drop-shadow-md">
           {category.name}
         </h3>
       </div>

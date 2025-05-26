@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 const subCategories = [
-  { name: 'men', href: '#' },
+  { name: `men's`, href: '#' },
   { name: 'women', href: '#' },
   { name: 'kids', href: '#' },
   { name: 'jewelry', href: '#' },
@@ -44,7 +44,7 @@ export default function CategorySidebar() {
   }
 
   const SidebarContent = () => (
-    <div className="w-full px-10 lg:px-20 py-5 bg-white  h-screen ">
+    <div className="w-full px-10 lg:px-20 py-5 bg-white  min-h-screen ">
       <h2 className="text-xl font-bold mb-4">Categories</h2>
       <ul className="space-y-2">
         {subCategories.map((cat) => (

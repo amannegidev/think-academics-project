@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <Layout>
      <div className="w-full rounded">
-        <div className="w-11/12 mx-auto my-2">
+        <div className="w-full mx-auto ">
             <Carousel />
         </div>
         <div className="w-11/12 mx-auto my-1">

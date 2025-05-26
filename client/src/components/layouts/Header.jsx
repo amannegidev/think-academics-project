@@ -27,7 +27,7 @@ const Header = () => {
       <div className="lg:w-11/12 mx-auto flex items-center justify-between">
         {/* Logo */}
         <NavLink to="/" className="flex items-center">
-          <img src="/logo-onlyone.png" alt="Logo" className="h-12 sm:h-14" />
+          <img src="/logo-onlyone.png" alt="Logo" className="h-12 sm:h-14 rounded" />
         </NavLink>
 
         {/* Desktop Navigation */}
@@ -77,7 +77,7 @@ const Header = () => {
             <Link to="/wishlist" className="relative">
               <i className="bi bi-heart text-xl"></i>
               <span className="absolute -top-1 -right-2 text-[10px] bg-red-500 text-white rounded-full px-1">
-                3
+                6
               </span>
             </Link>
 

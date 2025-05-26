@@ -16,10 +16,11 @@ connectDB();
 
 // Middleware 
 
-app.use(cors({
+app.options('*', cors({
   origin: 'https://think-academics-project-vw52.vercel.app',
   credentials: true,
 }));
+
 
 
 app.use(express.json());

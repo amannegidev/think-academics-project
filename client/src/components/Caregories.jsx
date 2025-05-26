@@ -55,11 +55,11 @@ const CategoriesPage = () => {
       <img
         src={category.image}
         alt={category.name}
-        className="w-full min-h-auto object-contain md:object-cover position-center"
+        className="w-full object-contain position-center"
       />
       
       <div className="text-center bg-[#B80000] py-2">
-        <h3 className="text-white sm:text-lg md:text-2xl  font-semibold drop-shadow-md">
+        <h3 className="text-white sm:text-lg md:text-2xl capitalize  font-semibold drop-shadow-md">
           {category.name}
         </h3>
       </div>

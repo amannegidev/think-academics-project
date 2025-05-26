@@ -55,7 +55,7 @@ const CategoriesPage = () => {
       <img
         src={category.image}
         alt={category.name}
-        className="w-full h-auto object-contain md:object-cover position-center"
+        className="w-full min-h-auto object-contain md:object-cover position-center"
       />
       
       <div className="text-center bg-[#B80000] py-2">

@@ -34,7 +34,7 @@ const JustArrivedProducts = () => {
     <section className="px-1 md:px-4 py-3 md:py-12 bg-" >
       <div className="max-w-full font-[helvetica]">
         <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 md:mb-10 ">
-          Just Arrived <span className='inline-block md:hidden ml-50 animate-pulse text-red-700'><i class="bi bi-arrow-right"></i></span>
+          Just Arrived <span className='inline-block md:hidden ml-30 animate-pulse text-red-700'><i class="bi bi-arrow-right"></i></span>
         </h2>
         <div className="flex sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 overflow-x-auto scroll-smooth ">
           {products.map((product) => (

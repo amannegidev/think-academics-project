@@ -16,10 +16,25 @@ connectDB();
 
 // Middleware 
 
-app.options('*', cors({
-  origin: 'https://think-academics-project.vercel.app',
+// Allowed Origins
+const allowedOrigins = [
+  'https://think-academics-project.vercel.app/',
+];
+
+const corsOptions = {
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error(`CORS policy: Origin ${origin} not allowed`));
+    }
+  },
   credentials: true,
-}));
+  optionsSuccessStatus: 200
+};
+
+
+app.use(cors(corsOptions));
 
 
 

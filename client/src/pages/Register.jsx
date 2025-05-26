@@ -30,7 +30,7 @@ const handleSubmit = async (e) => {
     };
 
     const res = await axios.post(`${API}/v1/auth/register`, userData, {
-      headers: { 'Content-Type': 'application/json' }
+     headers: { 'Content-Type': 'application/json' }
     });
 
     if (res && res.data.message) {

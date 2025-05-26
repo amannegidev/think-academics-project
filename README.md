@@ -4,12 +4,12 @@ A modern, full-stack e-commerce project built with React, Vite, Tailwind CSS, No
 live demo : https://think-academics-project.vercel.app/
 
 ⚙️ Tech Stack
-Frontend
+Frontend [on vercel]
 React (with Vite)
 Tailwind CSS
 prebuilt ui components 
 
-Backend
+Backend [on render]
 Node.js, Express.js
 MongoDB (with Mongoose)
 JWT for secure authentication
@@ -17,7 +17,6 @@ bcrypt for password hashing
 
 🔐 Features
 ✅ User Registration & Login with JWT
-✅ Role-based authentication (user/admin)
 ✅ Responsive UI (mobile-first)
 ✅ Reusable component architecture
 ✅ Product pages
